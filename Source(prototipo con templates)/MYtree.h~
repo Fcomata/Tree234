@@ -1,0 +1,29 @@
+#include "tree_node.h"
+#include <string>
+#include <sstream>
+#include <algorithm>
+#include <fstream>
+
+template<typename T, typename B>
+
+class tree{
+
+
+    public:
+
+	node<T, B, B>* root;
+        tree(T value, B max, B min);
+        bool search(T key);
+	
+	
+	
+
+    private:
+
+	
+        bool search(T key, node<T, B, B>* leaf);
+	void print_search();
+
+	
+        
+};

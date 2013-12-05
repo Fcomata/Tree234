@@ -1,0 +1,20 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+
+template<typename T, typename A, typename B>
+
+class node{
+
+	A max;
+	B min;
+	A dif = max - min;
+
+	T key_value[D];
+
+	node* key[D+1];
+	
+	
+      };
