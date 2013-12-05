@@ -16,12 +16,16 @@ tree::tree(int key){
 	root->midright=NULL;
 	root->right=NULL;
 	temp = root;
+	cadena="";
+
 	cout<<"\n--------------------------------------------"<<endl;
 	cout<<"Inicializando el Nodo Root del Arbol 2-3-4"<<endl;
 	cout<<"--------------------------------------------\n"<<endl;
+
+
 	cout<<"nodo root: "<<root-> key_value[0]<<"///"<<root-> key_value[1]<<"///"<<root-> key_value[2]<<endl;
 
-	cadena="";
+	
   }
 
 tree::~tree(){
@@ -404,12 +408,6 @@ void tree::print_search(node* leaf){
 
 int cont=0;
 
-	if(leaf == NULL){
-
-		for(int i=0; cont>0; cont--){cadena+="\t";}
-		cadena+="\n";
-
-	}
 
 
 	if(leaf != NULL){
@@ -418,17 +416,19 @@ int cont=0;
 		print_node(leaf);
 		
 		
-		if(leaf->left != NULL){print_search(leaf->left);cont++;}
-		else{cadena+="\t";cadena+="\n";}
+		if(leaf->left != NULL){print_search(leaf->left);flecha2();}
 		
-		if(leaf->midleft != NULL){print_search(leaf->midleft);cont++;}
-		else{cadena+="\t";cadena+="\n";}
+		
+		if(leaf->midleft != NULL){print_search(leaf->midleft);}
+		
 
-		if(leaf->midright != NULL){print_search(leaf->midright);cont++;}
-		else{cadena+="\t";cadena+="\n";}
+		if(leaf->midright != NULL){print_search(leaf->midright);}
+		
 
-		if(leaf->right != NULL){print_search(leaf->right);cont++;}
-		else{cadena+="\t";cadena+="\n";}
+		if(leaf->right != NULL){print_search(leaf->right);}
+		cadena+="\n";
+
+		
 
 
 	}
@@ -451,6 +451,12 @@ flecha();
 void tree::flecha () {
 
 cadena+="-->";
+
+}
+
+void tree::flecha2 () {
+
+cadena+="\\---->";
 
 }
 

@@ -40,6 +40,7 @@ class tree{
 	void print_node(node* leaf);
 	void coma();
 	void flecha();
+	void flecha2();
 	void fin();
 	
         

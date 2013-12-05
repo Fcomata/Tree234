@@ -1,0 +1,14 @@
+all :
+
+# build lbrary
+	cd ./src && $(MAKE)
+
+
+
+clean:
+
+# build lbrary
+	cd ./src && $(MAKE) clean
+
+
+

@@ -20,7 +20,7 @@ class tree{
 	node* insert(int key);
         bool search(int key);
 	void print();
-	bool insert(int key, node*);
+	
 	
 	
 
@@ -31,7 +31,7 @@ class tree{
 
     private:
 
-	
+	bool insert(int key, node*);
         bool search(int key, node *leaf);
 	void print_search(node* leaf);
 	node* devolver();

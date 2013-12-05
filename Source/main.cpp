@@ -14,14 +14,23 @@ Mytree->insert(4);
 Mytree->insert(10);
 Mytree->insert(15);
 Mytree->insert(7);
-
+/**/
+Mytree->insert(50);
+Mytree->insert(35);
+Mytree->insert(9);
+Mytree->insert(27);
+Mytree->insert(42);
+Mytree->insert(37);
+Mytree->insert(49);
+Mytree->insert(12);
+/**/
 Mytree->print();
 
 cout<<"\n--------------------------------------------"<<endl;
 cout<<"Inicializando Busqueda de Elementos Desde Root"<<endl;
 cout<<"--------------------------------------------\n"<<endl;
 
-for(int i =1; i<11; i++){
+for(int i =1; i<51; i++){
 
 cond = Mytree->search(i);
 
