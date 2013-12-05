@@ -4,6 +4,7 @@
 #include <algorithm>
 #include <fstream>
 
+template<typename T>
 
 class tree{
 
@@ -13,13 +14,13 @@ class tree{
 	node* root;
 	node* temp;
 
-        tree(int);
+        tree<int>(T);
         ~tree();
 	string cadena;
 
-	node* insert(int key);
-        bool search(int key);
-	void print();
+	node* insert(T key);
+        bool search(T key);
+	void prT();
 	
 	
 	
@@ -31,15 +32,16 @@ class tree{
 
     private:
 
-	bool insert(int key, node*);
-        bool search(int key, node *leaf);
+	bool insert(T key, node*);
+        bool search(T key, node *leaf);
 	void print_search(node* leaf);
 	node* devolver();
 	void print_search();
-	string to_string(int);
+	string to_string(T);
 	void print_node(node* leaf);
 	void coma();
 	void flecha();
+	void flecha2();
 	void fin();
 	
         

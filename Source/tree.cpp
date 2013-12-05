@@ -419,6 +419,7 @@ int cont=0;
 		if(leaf->left != NULL){print_search(leaf->left);flecha2();}
 		
 		
+		
 		if(leaf->midleft != NULL){print_search(leaf->midleft);}
 		
 

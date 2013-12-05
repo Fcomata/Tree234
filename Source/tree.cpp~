@@ -228,7 +228,7 @@ if((leaf-> key_value[1] == 0) || (leaf-> key_value[2] == 0) && (leaf->left == NU
 //////////////////////////////////////////////////////////////////////////////////////////////
 
 
-	if( (leaf-> key_value[1]!=0) && (leaf-> key_value[2]!=0) && (leaf-> key_value[2]!=0) ){
+	if( (leaf-> key_value[2]!=0) && (leaf-> key_value[1]!=0) && (leaf-> key_value[2]!=0) ){
 
 		if(leaf->parent->midleft==NULL || leaf->parent->midright==NULL){
 
@@ -413,22 +413,22 @@ int cont=0;
 	if(leaf != NULL){
 
 
-		print_node(leaf);
 		
 		
-		if(leaf->left != NULL){print_search(leaf->left);flecha2();}
 		
-		else{cadena+="\n";return;}
+		if(leaf->left != NULL){print_node(leaf);print_search(leaf->left);}
 		
 		
-		if(leaf->midleft != NULL){print_search(leaf->midleft);}
 		
-
-		if(leaf->midright != NULL){print_search(leaf->midright);}
+		if(leaf->midleft != NULL){print_node(leaf);print_search(leaf->midleft);}
 		
 
-		if(leaf->right != NULL){print_search(leaf->right);}
-		cadena+="\n";
+		if(leaf->midright != NULL){print_node(leaf);print_search(leaf->midright);}
+		
+
+		if(leaf->right != NULL){print_node(leaf);print_search(leaf->right);}
+
+		cadena+=";\n";
 
 		
 
@@ -439,6 +439,8 @@ int cont=0;
 
 void tree::print_node(node* leaf){
 
+if(leaf!=NULL){
+
 cadena+=to_string(leaf->key_value[0]); 
 coma(); 
 cadena+=to_string(leaf->key_value[1]);
@@ -446,7 +448,7 @@ coma();
 cadena+=to_string(leaf->key_value[2]); 
 flecha();
 
-
+}
 }
 
 
